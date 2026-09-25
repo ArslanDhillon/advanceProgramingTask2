@@ -1,4 +1,4 @@
-// app.js
+
 // Task 2: Fetch users from jsonplaceholder, filter by catchPhrase, format with destructuring
 
 const fetchAndProcessUsers = async () => {
@@ -11,18 +11,18 @@ const fetchAndProcessUsers = async () => {
 
     const users = await response.json();
 
-    // Filter users whose company catchPhrase contains "group" or "service" (case-insensitive)
+
     const filteredUsers = users.filter(({ company }) => {
       const phrase = company?.catchPhrase?.toLowerCase() || '';
       return phrase.includes('group') || phrase.includes('service');
     });
 
-    // Transform filtered data using Object Destructuring
+
     const formattedUsers = filteredUsers.map(({ name, email, address: { city } = {} }) => {
       return `User: ${name} | Email: ${email} | City: ${city}`;
     });
 
-    // Output results
+
     if (formattedUsers.length === 0) {
       console.log('No users found matching the filter criteria.');
     } else {
