@@ -1,0 +1,13 @@
+{
+  "name": "task2-user-fetch",
+  "version": "1.0.0",
+  "description": "Fetches users from jsonplaceholder, filters by catchPhrase, formats with destructuring",
+  "main": "app.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
